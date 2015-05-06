@@ -1,3 +1,5 @@
+![FFC splash](https://raw.githubusercontent.com/FGMEMBERS/CRJ700-family/merlion/CRJ700FFC-splash.png)
+
 # Bombardier CRJ700 series
 
 This is a project to develop the Bombardier CRJ700 regional jet for [FlightGear Flight Simulator](http://www.flightgear.org/).
@@ -36,6 +38,7 @@ Full credits list inside the Docs/ directory.
 Basically the entire family, minus the "next-generation CRJ" that Bombardier has marketed.
 
 * CRJ700
+* Merlion's CRJ700FFC (full first class) by N. Muralendraan --MIA001
 * CRJ700ER
 * CRJ700LR
 * CRJ900
