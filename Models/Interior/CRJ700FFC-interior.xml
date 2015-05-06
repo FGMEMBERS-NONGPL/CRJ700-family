@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Interior, CRJ700FFC (Add-on by Narendran Muraleedharan) -->
+
+<PropertyList>
+
+	<path>CRJ700FFC-interior.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>1000</max-m>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>LeftBinDoors</object-name>
+		<object-name>RightBinDoors</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 CRJ700.doors.toggle("overhead-bins");
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftBinDoors</object-name>
+		<property>sim/model/door-positions/overhead-bins/position-norm</property>
+		<factor>65</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.444</y-m>
+			<z-m>0.15</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>RightBinDoors</object-name>
+		<property>sim/model/door-positions/overhead-bins/position-norm</property>
+		<factor>65</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.444</y-m>
+			<z-m>0.15</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>FastenSeatbelts</object-name>
+		<condition>
+			<and>
+				<property>controls/switches/seatbelt-sign</property>
+				<greater-than-equals>
+					<property>systems/electrical/outputs/cabin</property>
+					<value>5</value>
+				</greater-than-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>NoSmoking</object-name>
+		<condition>
+			<and>
+				<property>controls/switches/no-smoking-sign</property>
+				<greater-than-equals>
+					<property>systems/electrical/outputs/cabin</property>
+					<value>5</value>
+				</greater-than-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Bins</object-name>
+		<object-name>LeftBinDoors</object-name>
+		<object-name>RightBinDoors</object-name>
+		<object-name>Carpet</object-name>
+		<object-name>Seats</object-name>
+		<object-name>Walls</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/cabin</property>
+				<value>15</value>
+			</greater-than-equals>
+		</condition>
+		<emission>
+			<red>0.475</red>
+			<green>0.5</green>
+			<blue>0.37</blue>
+			<factor-prop>controls/lighting/cabin-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<!-- Tray Tables -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>tray-left</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>70</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-1.27</y-m>
+			<z-m>-1.10</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>tray-right</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>70</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>1.27</y-m>
+			<z-m>-1.10</z-m>
+		</center>
+	</animation>
+
+	<!-- Lightmaps -->
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/CRJ700-family/Models/Effects/Lightmaps/CRJ700-interior-lightmap.png</image>
+			</texture>
+			<condition>
+				<use>systems/electrical/outputs/cabin</use>
+			</condition>
+			<factor>
+				<use>controls/lighting/cabin-norm</use>
+			</factor>
+		</parameters>
+		<object-name>Cabin</object-name>
+	</effect>
+
+	<!-- Seats into Rest Position -->
+
+	<animation>
+		<type>pick</type>
+		<object-name>seat1</object-name>
+		<object-name>seat2</object-name>
+		<object-name>seat3</object-name>
+		<object-name>seat4</object-name>
+		<object-name>seat5</object-name>
+		<object-name>seat6</object-name>
+		<object-name>seat7</object-name>
+		<object-name>seat8</object-name>
+		<object-name>seat9</object-name>
+		<object-name>seat10</object-name>
+		<object-name>seat11</object-name>
+		<object-name>seat12</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 CRJ700.doors.toggle("seat");
+				</script>
+			</binding>
+		</action>
+	</animation>
+
+<!-- IFES Down when seats in rest position -->
+
+ 	<animation>
+  	<object-name>ifes</object-name>
+  	<type>select</type>
+  		<condition>
+		<not>
+    			<property>sim/model/door-positions/seat/position-norm</property>
+    			<value>0</value>
+		</not>
+  		</condition>
+ 	</animation>
+
+<!-- Foot Rests out -->
+
+ 	<animation>
+  	<object-name>seat-bottom</object-name>
+  	<type>translate</type>
+		<property>sim/model/door-positions/seat/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind> 0.0</ind>
+    <dep> 0.0</dep>
+   </entry>
+   <entry>
+    <ind> 0.6</ind>
+    <dep> 0.52</dep>
+   </entry>
+   <entry>
+    <ind> 1.0</ind>
+    <dep> 0.6</dep>
+   </entry>
+  </interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+ 	<animation>
+  	<object-name>seat-bottom</object-name>
+  	<type>translate</type>
+		<property>sim/model/door-positions/seat/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind> 0.0</ind>
+    <dep> 0.0</dep>
+   </entry>
+   <entry>
+    <ind> 0.6</ind>
+    <dep> 0.0</dep>
+   </entry>
+   <entry>
+    <ind> 1.0</ind>
+    <dep> 0.1</dep>
+   </entry>
+  </interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+
+<!-- Seat Rows 1 to 12 -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>seat1</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-9.7</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat2</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-8.33</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat3</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-6.91</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat4</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-5.48</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat5</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-4.12</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat6</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.71</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat7</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.28</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat8</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.1</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat9</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.5</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat10</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>2.94</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat11</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>4.24</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>seat12</object-name>
+		<property>sim/model/door-positions/seat/position-norm</property>
+		<factor>25</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>5.73</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.32</z-m>
+		</center>
+	</animation>
+
+<!-- Seat Design and Texture Changes with Livery (from a de-branding request) -->
+
+   <animation>
+       <type>material</type>
+		<object-name>seat1</object-name>
+		<object-name>seat2</object-name>
+		<object-name>seat3</object-name>
+		<object-name>seat4</object-name>
+		<object-name>seat5</object-name>
+		<object-name>seat6</object-name>
+		<object-name>seat7</object-name>
+		<object-name>seat8</object-name>
+		<object-name>seat9</object-name>
+		<object-name>seat10</object-name>
+		<object-name>seat11</object-name>
+		<object-name>seat12</object-name>
+		<object-name>ifes</object-name>
+		<object-name>Walls</object-name>
+		<object-name>block</object-name>
+		<object-name>tray-left</object-name>
+		<object-name>tray-right</object-name>
+		<object-name>seat-bottom</object-name>
+       <property-base>sim/model/livery</property-base>
+       <texture-prop>cabin</texture-prop>
+       <texture>CRJ700FFC-interior.png</texture>
+   </animation>
+
+</PropertyList>

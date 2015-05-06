@@ -69,7 +69,7 @@
 		<object-name>Reverser</object-name>
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
-		<texture>CRJ700-Blank.png</texture>
+		<texture>Liveries/CRJ700/MIA.png</texture>
 	</animation>
 
 	<!-- Reflection shaders -->
@@ -78,10 +78,6 @@
 		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700reflect</inherits-from>
 		<object-name>Nacelle</object-name>
 		<object-name>Reverser</object-name>
-	</effect>
-	<effect>
-		<name>Aircraft dirty reflect</name>
-		<inherits-from>Aircraft/CRJ700-family/Models/Effects/CRJ700dirtyreflect</inherits-from>
 		<object-name>Intake</object-name>
 	</effect>
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Aircraft property settings specific to the CRJ700 Full First Class -->
+<!-- This Aircraft Variant is an add-on by Narendran Muraleedharan -->
+
+<PropertyList include="CRJ700-main.xml">
+
+	<sim>
+		<description>Bombardier CRJ700 Merlion Full First Class</description>
+		<flight-model>yasim</flight-model>
+		<aero>CRJ700</aero>
+
+		<model>
+			<path>Aircraft/CRJ700-family/Models/CRJ700FFC.xml</path>
+			<door>
+				<position-x-m>-11.519</position-x-m>
+				<position-y-m>-1.139</position-y-m>
+				<position-z-m>-1.796</position-z-m>
+				<jetway-hood-deg>3</jetway-hood-deg>
+			</door>
+		</model>
+
+		<startup>
+			<splash-texture>Aircraft/CRJ700-family/CRJ700FFC-splash.png</splash-texture>
+		</startup>
+
+		<tutorials include="Tutorials/CRJ700-tutorials.xml" />
+
+		<view n="0">
+			<name>Captain View</name>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.528</x-offset-m>
+				<y-offset-m archive="y">-0.468</y-offset-m>
+				<z-offset-m archive="y">-13.105</z-offset-m>
+			</config>
+		</view>
+		<view n="100">
+			<name>Cabin View</name>
+			<type>lookfrom</type>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0</x-offset-m>
+				<y-offset-m archive="y">-0.468</y-offset-m>
+				<z-offset-m archive="y">0</z-offset-m>
+			</config>
+		</view>
+		<view n="101">
+			<name>First Officer View</name>
+			<type>lookfrom</type>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.528</x-offset-m>
+				<y-offset-m archive="y">-0.468</y-offset-m>
+				<z-offset-m archive="y">-13.105</z-offset-m>
+			</config>
+		</view>
+
+		<weight n="1">
+			<weight-lb>10000</weight-lb>
+			<max-lb>18800</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Bombardier CRJ700</label>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+</PropertyList>
