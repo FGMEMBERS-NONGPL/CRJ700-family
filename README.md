@@ -28,6 +28,9 @@ Special thanks also to these people:
 * Emilian Huminiuc ("i4dnf")
 * Vivian Meazza
 * Syd Adams
+* Ray St. Marie who moved the dependencies of the 737-300 
+over to the CRJfamily by creating the Instruments folder, 
+and then had the audacity to add his own name to this file :)
 
 Full credits list inside the Docs/ directory.
 

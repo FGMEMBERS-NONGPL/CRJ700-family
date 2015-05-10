@@ -3,7 +3,7 @@
 <!-- Bombardier CRJ700 series -->
 <!-- 2d cockpit panel -->
 
-<!-- Requires 737-300 to be installed -->
+<!-- No Longer Requires 737-300 to be installed -->
 
 <PropertyList>
 
@@ -13,35 +13,35 @@
 	<h>768</h>
 	
 	<instruments>
-		<instrument include="/Aircraft/737-300/Instruments/pfd2.xml">
+		<instrument include="/Aircraft/CRJ700-family/Instruments/pfd2.xml">
 			<name>PFD</name>
 			<x>350</x>
 			<y>140</y>
 			<w>280</w>
 			<h>280</h>
 		</instrument>
-		<instrument include="/Aircraft/737-300/Instruments/pfd1.xml">
+		<instrument include="/Aircraft/CRJ700-family/Instruments/pfd1.xml">
 			<name>MFD</name>
 			<x>620</x>
 			<y>140</y>
 			<w>280</w>
 			<h>280</h>
 		</instrument>
-		<instrument include="/Aircraft/737-300/Instruments/eicas.xml">
+		<instrument include="/Aircraft/CRJ700-family/Instruments/eicas.xml">
 			<name>EICAS</name>
 			<x>890</x>
 			<y>140</y>
 			<w>280</w>
 			<h>280</h>
 		</instrument>
-		<instrument include="/Aircraft/737-300/Instruments/autopilot-panel.xml">
+		<instrument include="/Aircraft/CRJ700-family/Instruments/autopilot-panel.xml">
 			<name>MCP</name>
 			<x>787</x>
 			<y>373</y>
 			<w>473</w>
 			<h>200</h>
 		</instrument>
-		<instrument include="/Aircraft/737-300/Instruments/clock.xml">
+		<instrument include="/Aircraft/CRJ700-family/Instruments/clock.xml">
 			<name>Clock</name>
 			<x>131</x>
 			<y>95</y>

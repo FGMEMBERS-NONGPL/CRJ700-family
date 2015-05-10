@@ -265,7 +265,6 @@
 			<row>2</row>
 			<col>6</col>
 			<property>instrumentation/nav[0]/radials/selected-deg</property>
-			<live type="bool">true</live>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
@@ -346,7 +345,6 @@
 			<row>3</row>
 			<col>6</col>
 			<property>instrumentation/nav[1]/radials/selected-deg</property>
-			<live type="bool">true</live>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
