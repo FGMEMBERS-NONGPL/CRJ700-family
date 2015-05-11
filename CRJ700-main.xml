@@ -716,7 +716,7 @@
                 <volume>1</volume>
             </speaker>
         </tcas>
-        <!-- Ripped from the 777 -->
+        <!-- Ripped from the 777 and installed into the CRJ700-family -->
         <efis>
             <inputs>
                 <airport type="bool">true</airport>
@@ -730,8 +730,8 @@
             </mfd>
         </efis>
         <nd>
-            <radar-texture-path type="string">Aircraft/777/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-            <symbol-texture-path type="string">Aircraft/777/Models/Instruments/MFD/nd_symbols.png</symbol-texture-path>
+            <radar-texture-path type="string">Aircraft/CRJ700-family/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/CRJ700-family/Models/Instruments/MFD/nd_symbols.png</symbol-texture-path>
             <symbol-texture-size type="int">512</symbol-texture-size>
             <font>
                 <color>
