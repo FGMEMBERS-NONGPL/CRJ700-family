@@ -1,0 +1,29 @@
+v1.5:
+Bugfixes:
+- Fix wind indicator in MFD. Will point to correct relative wind direction now.
+- Fix course pointer orientation in MFD, PFD. Will point to heading according to CRS1 and CRS2 resp.
+- Fix MFD map symbols. No longer dependent on other Aircraft
+- Remove 2D-Panel to get rid of dependency to B737-300
+- Fix framerate drop when running with APU
+
+
+
+
+Features:
+- OPH Buttons: switchlights and light test button
+- Mode Control Panel (MCP): Push function added to buttons CRS1, CRS2 (direct to corresponding nav source), HDG (current heading up)
+- Add Slats to model and animate. Slats/Flaps indicator on EICAS modified
+- APU details on EICAS
+- Implement hydraulic system
+- Implement electric system
+- Add views for OHP, pedestal, gear views, cabin window views
+- EICAS Pages for Doors, AC, DC, hydraulic
+- Add dynamic checklists
+- Implement fuel pump buttons in OHP
+
+Todo before release:
+- Bearing pointer fixes
+- useless speedbrake
+- yasim version error
+- colours of CDIs in MFD and PFD
+- ADF bearings are useless
