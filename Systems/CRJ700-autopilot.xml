@@ -617,7 +617,7 @@
 	</filter>
     <!-- 4 : IAS hold -->
     <pi-simple-controller>
-		<name>IAS controller</name>
+		<name>Altitude controller</name>
 		<debug type="bool">false</debug>
 		<enable>
 			<condition>

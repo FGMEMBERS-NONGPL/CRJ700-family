@@ -17,6 +17,7 @@
 		<model>
 			<path>Aircraft/CRJ700-family/Models/CRJ900.xml</path>
 			<variant type="int">2</variant>
+                        <fallback-model-index type="int">216</fallback-model-index>
 			<door>
 				<position-x-m type="float">-13.459</position-x-m>
 				<position-y-m type="float">-1.139</position-y-m>
@@ -37,7 +38,7 @@
 		</model>
 
 		<sound>
-			<path>Sounds/CRJ900-sounds.xml</path>
+			<path>Aircraft/CRJ700-family/Sounds/CRJ900-sounds.xml</path>
 		</sound>
 
         <dimensions>

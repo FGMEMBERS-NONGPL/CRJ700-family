@@ -15,6 +15,14 @@
 	</animation>
 
 	<animation>
+		<type>select</type>
+		<object-name>Sphere</object-name>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+	<animation>
 		<type>billboard</type>
 	</animation>
 	
